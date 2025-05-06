@@ -26,6 +26,7 @@ module YmlBuilder # :nodoc:
       @params[:param]               = nil
       @params[:weight]              = nil
       @params[:dimensions]          = nil
+      @params[:condition]          = nil
 
       @mandatories = [:url, :price, :currency_id, :category_id, :delivery, :name]
     end

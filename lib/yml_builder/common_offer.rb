@@ -167,7 +167,11 @@ module YmlBuilder
       def to_yml_optional(key, value)
         return nil if value.nil?
         key_xml = ::YmlBuilder::Common.convert_key(key)
-        "  <#{key_xml}>#{::YmlBuilder::Common.encode_special_chars(value)}</#{key_xml}>"
+        if key_xml == 'condition'
+          "  <#{key_xml} type=\"#{value[:type]}\"><quality>#{value[:quality]}</quality></#{key_xml}>"
+        else
+          "  <#{key_xml}>#{::YmlBuilder::Common.encode_special_chars(value)}</#{key_xml}>"
+        end
       end
 
 
