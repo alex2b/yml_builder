@@ -184,6 +184,7 @@ item.add_picture('http://example-site.ru/image2')
 item.add_cover_picture('http://example-site.ru/image_cover')
 item.add_param(name: 'Обложка', value: 'Мягкая')
 item.add_param(name: 'Страниц', value: 10, unit: 'шт.')
+item.condition={type: 'preowned', quality: 'excellent'}
 
 price.offers.add(item)
 
@@ -243,6 +244,7 @@ price.offers.add(item)
         <name>Товар №3</name>
         <param name="Обложка">Мягкая</param>
         <param name="Страниц" unit="шт.">10</param>
+        <condition type="preowned"><quality>excellent</quality></condition>
       </offer>
       <offer id="6" available="true">
         <url>http://nosite/items/6</url>
